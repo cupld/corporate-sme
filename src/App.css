@@ -131,3 +131,52 @@
   width: 50px;
   height: 50px;
 }
+.fullName {
+  position: absolute;
+  left: 84%;
+}
+.usernameLogo {
+  height: 20px;
+  width: 20px;
+  right: 16%;
+  top: 18px;
+  position: absolute;
+}
+.reqPage {
+  font-size: 15;
+  text-align: left;
+  margin: 100px;
+  position: absolute;
+  top: 20px;
+  width: 60%;
+}
+.gbkImg {
+  width: 350px;
+  height: 400px;
+  left: 60%;
+  position: absolute;
+}
+.makeSure {
+  color: red;
+}
+.gbkLink {
+  font-size: 200;
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  align-items: center;
+  text-align: center;
+}
+.callCenter {
+  font-size: 200;
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+}
+.callCenterImg {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+}
