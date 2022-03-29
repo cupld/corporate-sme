@@ -36,7 +36,7 @@ export default function Req() {
           <tr>
             <td>
               6- Authorization Certificate from Ministry of Commerce (ensure
-              that date is not more than 10 days)
+              that date s not more than 10 days)
             </td>
           </tr>
           <tr>

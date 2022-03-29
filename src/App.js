@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
-import { auth } from "./firebase";
+import React from "react";
 import Req from "./Req";
+import KYC from "./KYC";
 function App() {
-  return <Req />;
+  return <KYC />;
 }
 
 export default App;
