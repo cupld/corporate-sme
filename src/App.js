@@ -4,10 +4,12 @@ import { Route, Routes } from "react-router-dom";
 // import SignUp from "./pages/SignUp";
 // import SignIn from "./pages/SignIn";
 import MyDropzone from "./pages/DropZone";
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
     <div>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<MyDropzone />} />
         {/* <Route path="/" element={<SignIn />} /> */}
