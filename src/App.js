@@ -5,16 +5,21 @@ import { Route, Routes } from "react-router-dom";
 // import SignIn from "./pages/SignIn";
 import MyDropzone from "./pages/DropZone";
 import NavBar from "./Components/NavBar";
+import Application from "./Components/Application";
 
 function App() {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <Routes>
-        <Route path="/" element={<MyDropzone />} />
+        <Route path="/" element={<Application />} />
         {/* <Route path="/" element={<SignIn />} /> */}
         {/* <Route path="/" element={<SignUp />} /> */}
       </Routes>
+      <img
+        className="logoGBK2"
+        src="https://freesvg.org/img/1607600654curved-lines-abstract-svg.png"
+      />
     </div>
   );
 }
