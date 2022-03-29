@@ -7,20 +7,20 @@ import MyDropzone from "./pages/DropZone";
 import NavBar from "./Components/NavBar";
 import Application from "./Components/Application";
 import Req from "./Components/Req";
+import curve from "./Images/curve.png";
+import Cur from "./Components/Cur";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="imgBk">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Application />} />
+        <Route path="/" element={<Req />} />
         {/* <Route path="/" element={<SignIn />} /> */}
         {/* <Route path="/" element={<SignUp />} /> */}
       </Routes>
-      <img
-        className="logoGBK2"
-        src="https://freesvg.org/img/1607600654curved-lines-abstract-svg.png"
-      />
+      <Footer />
     </div>
   );
 }

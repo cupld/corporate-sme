@@ -3,7 +3,51 @@ import React from "react";
 function Application() {
   return (
     <div>
-      <img className="linning" src="https://freesvg.org/img/dotted-line.png" />
+      {/* <img className="linning" src="https://freesvg.org/img/dotted-line.png" /> */}
+      <hr
+        style={{
+          height: "5px",
+          backgroundColor: "#c4c4c4",
+          width: "20%",
+          border: "none",
+          position: "absolute",
+          top: "250px",
+          left: "150px",
+        }}
+      />
+      <hr
+        style={{
+          height: "5px",
+          backgroundColor: "#c4c4c4",
+          width: "18%",
+          border: "none",
+          position: "absolute",
+          top: "250px",
+          left: "400px",
+        }}
+      />
+      <hr
+        style={{
+          height: "5px",
+          backgroundColor: "#c4c4c4",
+          width: "18%",
+          border: "none",
+          position: "absolute",
+          top: "250px",
+          left: "650px",
+        }}
+      />
+      {/* <hr
+        style={{
+          height: "5px",
+          backgroundColor: "#c4c4c4",
+          width: "10%",
+          border: "none",
+          position: "absolute",
+          top: "250px",
+          left: "850px",
+        }}
+      /> */}
       <div className="step1">
         <img
           className="stepimg"
@@ -31,7 +75,7 @@ function Application() {
       {/* <div className="step5">
         <img
           className="stepimg"
-          src="https://cdn-icons.flaticon.com/png/512/2415/premium/2415418.png?token=exp=1648532772~hmac=8777efa0c505e5ca7fee2a8f18b418d4"
+          src="https://cdn-icons.flaticon.com/png/512/2946/premium/2946636.png?token=exp=1648545452~hmac=528630d972bffcf8ef3a06226c43cea0"
         />
       </div> */}
     </div>

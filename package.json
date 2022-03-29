@@ -8,8 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
     "firebase": "^9.6.10",
-    "mobox": "^1.3.11",
     "jwt-decode": "^3.1.2",
+    "mobox": "^1.3.11",
     "mobx": "^6.5.0",
     "mobx-react": "^7.3.0",
     "react": "^17.0.2",
@@ -18,6 +18,8 @@
     "react-dropzone": "^12.0.4",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
