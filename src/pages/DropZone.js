@@ -14,6 +14,7 @@ import {
 import { storage, db } from "../firebase";
 
 import { ref, getDownloadURL, uploadBytes } from "@firebase/storage";
+import authStore from "../stores/AuthStore";
 
 function MyDropzone() {
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -47,6 +48,7 @@ function MyDropzone() {
     await setDoc(doc(db, "files", uuidv4()), {
       files: [...uploadedImages],
       timestamp: serverTimestamp(),
+      userId: authStore.user.uid,
     });
   };
 
