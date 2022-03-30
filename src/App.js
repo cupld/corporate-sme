@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 // import NavBar from "./components/NavBar";
-// import SignUp from "./pages/SignUp";
+import SignUp from "./pages/SignUp";
 // import SignIn from "./pages/SignIn";
 import MyDropzone from "./pages/DropZone";
 
