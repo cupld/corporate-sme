@@ -1,61 +1,55 @@
+// import React from "react";
+
+// function Testing() {
+//   return (
+//     <div className="container">
+//       <header>
+//         <div className="logoGBK">
+//           <img
+//             className="gbkLogo"
+//             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Gulf_Bank_Logo.svg/2560px-Gulf_Bank_Logo.svg.png"
+//           />
+//           <div>
+//             <img
+//               className="usernameLogo"
+//               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Red-circle.svg/240px-Red-circle.svg.png"
+//             />
+//             <p className="fullName">Fahad AlJuwaihel</p>
+//           </div>
+//         </div>
+//       </header>
+//       <>
+//         <aside>hello</aside>
+//         <div className="content">
+//           <article>
+//             <div>
+//               <h1>Helloooooooo</h1>
+//             </div>
+//           </article>
+//           <footer>
+//             <h1>footer</h1>
+//           </footer>
+//         </div>
+//       </>
+//     </div>
+//   );
+// }
+
+// export default Testing;
+
 import React from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
-import { auth } from "../firebase";
+
 function Testing() {
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("🚀 ~ file: App.js ~ line 8 ~ App ~ user", user);
-    createUserWithEmailAndPassword(auth, user.email, user.password)
-      .then((userCredential) => {
-        console.log(
-          "🚀 ~ file: App.js ~ line 14 ~ .then ~ userCredential",
-          userCredential
-        );
-        // Signed in
-        // const user = userCredential.user;
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
-  };
   return (
-    <div>
-      <header className="App-header">
-        <div className="form">
-          <form onSubmit={handleSubmit}>
-            <div className="input-container">
-              <label>Email </label>
-              <input
-                type="text"
-                name="email"
-                required
-                onChange={(e) => setUser({ ...user, email: e.target.value })}
-              />
-            </div>
-            <div className="input-container">
-              <label>Password </label>
-              <input
-                type="password"
-                name="pass"
-                required
-                onChange={(e) => setUser({ ...user, password: e.target.value })}
-              />
-            </div>
-            <div className="button-container" onClick={handleSubmit}>
-              <input type="submit" />
-            </div>
-          </form>
+    <main>
+      <div className="container">
+        <div className="flexBox flexBox1"></div>
+        <div className="containerB">
+          <div className="flexBox flexBox2"></div>
+          <footer className="flexBox flexBox3"></footer>
         </div>
-      </header>
-    </div>
+      </div>
+    </main>
   );
 }
 

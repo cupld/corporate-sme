@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import React, { useState } from "react";
 import { Col, Form, InputGroup, Row, Button, FormGroup } from "react-bootstrap";
 
-export default function KYC() {
+export default function Kyc() {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {

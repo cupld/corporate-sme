@@ -9,17 +9,18 @@ import MyDropzone from "./pages/DropZone";
 // import curve from "./Images/curve.png";
 // import Cur from "./Components/Cur";
 import Footer from "./Components/Footer";
+import Testing from "./Components/Testing";
 
 function App() {
   return (
     <div className="imgBk">
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         {/* <Route path="/" element={<Req />} /> */}
-        <Route path="/" element={<SignIn />} />
+        <Route path="/" element={<Testing />} />
         {/* <Route path="/" element={<SignUp />} /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
