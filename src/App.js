@@ -1,11 +1,14 @@
 import "./App.css";
 import { NavLink, Route, Routes } from "react-router-dom";
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/Layouts/NavBar";
 // import MyDropzone from "./pages/DropZone";
-import Application from "./Components/Application";
-import Footer from "./Components/Footer";
+import Application from "./Components/App/Application";
+import Footer from "./Components/Layouts/Footer";
 import Req from "./Components/Req";
-import Header from "./Components/Header";
+import Header from "./Components/Layouts/Header";
+import SignUp from "./pages/SignUp";
+import Testing from "./Components/Testing";
+import Status from "./Components/Email/Status";
 function App() {
   return (
     <main>
@@ -20,9 +23,10 @@ function App() {
           <div className="flexBox flexBox2">
             <Routes>
               <Route path="/" element={<Application />} />
-              {/* <Route path="/" element={<Application />} /> */}
-              {/* <Route path="/" element={<Testing />} /> */}
-              {/* <Route path="/" element={<SignUp />} /> */}
+              <Route path="/Requirements" element={<Req />} />
+              <Route path="/Testing" element={<Testing />} />
+              <Route path="/Signup" element={<SignUp />} />
+              <Route path="/Status" element={<Status />} />
             </Routes>
           </div>
           <footer className="flexBox flexBox3">

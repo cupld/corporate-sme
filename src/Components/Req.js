@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-import GulfBankImage from "./GulfBankImage";
+import GulfBankImage from "./Layouts/GulfBankImage";
 
 export default function Req() {
   return (
