@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Form, Row, FormGroup, Button } from "react-bootstrap";
 
-function Testing() {
+function AppForm() {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -49,10 +49,10 @@ function Testing() {
 
           <Form.Group as={Col} md="4" controlId="validationCustom01">
             <Form.Label>Does the Company Have branches</Form.Label>
-            <>
+            <div className="radio">
               <Form.Check type="radio" aria-label="option 1" label="Yes" />
               <Form.Check type="radio" aria-label="option 2" label="No" />
-            </>
+            </div>
 
             <Form.Control
               type="number"
@@ -212,12 +212,15 @@ function Testing() {
             />
             <h4>Shareholders and Partners Details</h4>
             <Form.Label>Are You A Shareholding Company?</Form.Label>
-            <Form.Check type="radio" aria-label="option 2" label="Yes" />
-            <Form.Check
-              type="radio"
-              aria-label="option 2"
-              label="No (If No kindly skip below)"
-            />
+            <div className="radio">
+              <Form.Check type="radio" aria-label="option 1" label="Yes" />
+              <Form.Check
+                type="radio"
+                aria-label="option 2"
+                label="No (If No kindly skip below)"
+              />
+            </div>
+
             <Form.Label>Name of Shareholder</Form.Label>
             <Form.Control
               className="inputs"
@@ -234,16 +237,22 @@ function Testing() {
             />
             <p></p>
             <Form.Label>Are You Politically Expossed Person ?</Form.Label>
-            <Form.Check type="radio" aria-label="option 2" label="Yes" />
-            <Form.Check type="radio" aria-label="option 2" label="No " />
+            <div className="radio">
+              <Form.Check type="radio" aria-label="option 1" label="Yes" />
+              <Form.Check type="radio" aria-label="option 2" label="No" />
+            </div>
+
             <p></p>
             <Form.Label>
               Have you issued an official Power of attorney (POA), or Internal
               Bank POA, or Authorization Letter for any person to operate the
               bank account on your behalf?
             </Form.Label>
-            <Form.Check type="radio" aria-label="option 2" label="Yes" />
-            <Form.Check type="radio" aria-label="option 2" label="No " />
+            <div className="radio">
+              <Form.Check type="radio" aria-label="option 1" label="Yes" />
+              <Form.Check type="radio" aria-label="option 2" label="No" />
+            </div>
+
             <p></p>
             <Form.Label>
               Has the legal entity/scope of the business been changed?if
@@ -251,16 +260,22 @@ function Testing() {
               Article of Association?
             </Form.Label>
 
-            <Form.Check type="radio" aria-label="option 2" label="Yes" />
-            <Form.Check type="radio" aria-label="option 2" label="No " />
+            <div className="radio">
+              <Form.Check type="radio" aria-label="option 1" label="Yes" />
+              <Form.Check type="radio" aria-label="option 2" label="No" />
+            </div>
+
             <p></p>
             <Form.Label>
               Has the partner qoutes been modified, or partners entered or
               exited? if yes, provide the Commercial Registration and Amendments
               Of the Article of Association
             </Form.Label>
-            <Form.Check type="radio" aria-label="option 2" label="Yes" />
-            <Form.Check type="radio" aria-label="option 2" label="No " />
+            <div className="radio">
+              <Form.Check type="radio" aria-label="option 1" label="Yes" />
+              <Form.Check type="radio" aria-label="option 2" label="No" />
+            </div>
+
             <p></p>
             <Form.Label>
               Is any of the partners, executive managers or authorized
@@ -304,9 +319,11 @@ function Testing() {
               previously assigned to, or currently handle, senior public office
               in any country, as per the definitions stated in the below
             </Form.Label>
+            <div className="radio">
+              <Form.Check type="radio" aria-label="option 1" label="Yes" />
+              <Form.Check type="radio" aria-label="option 2" label="No" />
+            </div>
 
-            <Form.Check type="radio" aria-label="option 2" label="Yes" />
-            <Form.Check type="radio" aria-label="option 2" label="No" />
             <p></p>
             <Form.Label>
               (If yes on the previous question, please complete a Individual KYC
@@ -334,37 +351,41 @@ function Testing() {
             <h5>Incoming Credit Transactions</h5>
             <Row>
               <Form.Label>Quarterly Number of Transactions</Form.Label>
-              <Form.Check
-                type="radio"
-                aria-label="option 2"
-                label="below 100 Transactions"
-              />
-              <Form.Check
-                type="radio"
-                aria-label="option 2"
-                label="Between 100- 1000 Transactions"
-              />
-              <Form.Check
-                type="radio"
-                aria-label="option 2"
-                label="Above 1000 Transactions"
-              />
+              <div className="radio">
+                <Form.Check
+                  type="radio"
+                  aria-label="option 2"
+                  label="below 100 Transactions"
+                />
+                <Form.Check
+                  type="radio"
+                  aria-label="option 2"
+                  label="Between 100- 1000 Transactions"
+                />
+                <Form.Check
+                  type="radio"
+                  aria-label="option 2"
+                  label="Above 1000 Transactions"
+                />
+              </div>
               <Form.Label>Quarterly Value of Transactions</Form.Label>
-              <Form.Check
-                type="radio"
-                aria-label="option 2"
-                label="below KD 100,000"
-              />
-              <Form.Check
-                type="radio"
-                aria-label="option 2"
-                label="Between KD 100,000 - 1,000,0000 "
-              />
-              <Form.Check
-                type="radio"
-                aria-label="option 2"
-                label="Above KD 1,000,000 "
-              />
+              <div className="radio">
+                <Form.Check
+                  type="radio"
+                  aria-label="option 2"
+                  label="below KD 100,000"
+                />
+                <Form.Check
+                  type="radio"
+                  aria-label="option 2"
+                  label="Between KD 100,000 - 1,000,0000 "
+                />
+                <Form.Check
+                  type="radio"
+                  aria-label="option 2"
+                  label="Above KD 1,000,000 "
+                />
+              </div>
             </Row>
             <h5>Account Held with other banks</h5>
             <Form.Label>Bank Name</Form.Label>
@@ -390,25 +411,42 @@ function Testing() {
             <Form.Label>
               Nature of Transactions Expected on the account
             </Form.Label>
-
-            <Form.Check type="radio" aria-label="option 2" label="Cash" />
-            <Form.Check type="radio" aria-label="option 2" label="Cheques" />
-            <Form.Check type="radio" aria-label="option 2" label="Transfers" />
-            <Form.Check
-              type="radio"
-              aria-label="option 2"
-              label="POS Payments"
-            />
+            <div className="radio">
+              <Form.Check type="radio" aria-label="option 2" label="Cash" />
+              <Form.Check type="radio" aria-label="option 2" label="Cheques" />
+              <Form.Check
+                type="radio"
+                aria-label="option 2"
+                label="Transfers"
+              />
+              <Form.Check
+                type="radio"
+                aria-label="option 2"
+                label="POS Payments"
+              />
+            </div>
           </>
         </Form.Group>
         <Form.Group className="mb-3">
           <h4>Terms and Conditions</h4>
-          <Form.Label>Kindly Read before submitting</Form.Label>
-          <Form.Check
-            required
-            label="I hereby the individual that is the ultimate benefecial owner (or am authorized to apply om behalf of the ultimate benefecial owner) of this account and all the income to which this form relates, or am using this form to document myself as an idividual that is an  owner or account holder of financial instituation. and I herby declare that all the above information I have submitted to Gulf Bank respect to our account with the Bank, are true and correct to date when occurs. I hereby undertake to provide the Bank with further information, and a copy o the commercial/ industrial registration upon renewal. i assume full responsibility for failing to do so,whereby the Bank has the right to carry out all actions it deems appropriate to stop transaction on, and close my account, and I bear full responsibility for the consequenses thereof without liability on the part of the Bank"
-            feedbackType="invalid"
-          />
+
+          <label className="check">
+            <input feedbackType="invalid" required type="checkbox" /> I hereby
+            the individual that is the ultimate benefecial owner (or am
+            authorized to apply om behalf of the ultimate benefecial owner) of
+            this account and all the income to which this form relates, or am
+            using this form to document myself as an idividual that is an owner
+            or account holder of financial instituation. and I herby declare
+            that all the above information I have submitted to Gulf Bank respect
+            to our account with the Bank, are true and correct to date when
+            occurs. I hereby undertake to provide the Bank with further
+            information, and a copy o the commercial/ industrial registration
+            upon renewal. i assume full responsibility for failing to do
+            so,whereby the Bank has the right to carry out all actions it deems
+            appropriate to stop transaction on, and close my account, and I bear
+            full responsibility for the consequenses thereof without liability
+            on the part of the Bank
+          </label>
         </Form.Group>
 
         <Button className="next" type="submit">
@@ -419,4 +457,4 @@ function Testing() {
   );
 }
 
-export default Testing;
+export default AppForm;
