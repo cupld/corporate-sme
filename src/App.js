@@ -6,9 +6,10 @@ import Application from "./Components/App/Application";
 import Footer from "./Components/Layouts/Footer";
 import Req from "./Components/Req";
 import Header from "./Components/Layouts/Header";
-import SignUp from "./pages/SignUp";
 import Testing from "./Components/Testing";
 import Status from "./Components/Email/Status";
+import SignUpComponent from "./Components/Auth/SignUpComponent";
+import SignInComponent from "./Components/Auth/SignInComponent";
 function App() {
   return (
     <main>
@@ -25,8 +26,9 @@ function App() {
               <Route path="/" element={<Application />} />
               <Route path="/Requirements" element={<Req />} />
               <Route path="/Testing" element={<Testing />} />
-              <Route path="/Signup" element={<SignUp />} />
+              <Route path="/Signup" element={<SignUpComponent />} />
               <Route path="/Status" element={<Status />} />
+              <Route path="/SignIn" element={<SignInComponent />} />
             </Routes>
           </div>
           <footer className="flexBox flexBox3">

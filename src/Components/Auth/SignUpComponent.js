@@ -1,8 +1,7 @@
 import React from "react";
-import SignIn from "../pages/SignIn";
-import SignUp from "../pages/SignUp";
+import SignUp from "../../pages/SignUp";
 
-function Testing() {
+function SignUpComponent() {
   return (
     <div className="app">
       <img
@@ -16,4 +15,4 @@ function Testing() {
   );
 }
 
-export default Testing;
+export default SignUpComponent;
