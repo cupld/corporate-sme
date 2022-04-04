@@ -26,6 +26,8 @@ body {
   background-image: url("./Images/bg.png");
   margin: 0;
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .App-link {
   color: #61dafb;
@@ -36,9 +38,6 @@ body {
   height: 4rem;
 }
 
-.imaging:hover {
-  cursor: pointer;
-}
 .settingImage {
   bottom: 0;
   width: 4rem;
@@ -91,17 +90,13 @@ body {
   position: fixed;
   margin-top: 25px;
 }
-.linning {
-  width: 50rem;
-  height: 20rem;
-  position: absolute;
-  left: 150px;
-}
-.line1 {
-  height: 5px;
-  background-color: #c4c4c4;
-  width: 50px;
-  border: none;
+
+.step1:hover,
+.step2:hover,
+.step3:hover,
+.step4:hover,
+.imaging:hover {
+  cursor: pointer;
 }
 .step1 {
   text-align: center;
@@ -160,7 +155,8 @@ body {
 }
 .fullName {
   position: absolute;
-  left: 84%;
+  left: 85%;
+  top: 2px;
 }
 .usernameLogo {
   height: 20px;
@@ -188,7 +184,7 @@ body {
   position: absolute;
 }
 .makeSure {
-  color: red;
+  color: #dd3e3e;
 }
 .gbkLink {
   font-size: 200;
@@ -233,7 +229,7 @@ body {
 }
 .aside {
   position: absolute;
-  background-color: red;
+  background-color: #dd3e3e;
   width: 200px;
   height: 100vh;
 }
@@ -274,26 +270,130 @@ article {
   height: 100vh;
   width: inherit;
 }
+.containerC {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
 
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+.callC {
+  margin-right: 40px;
+}
 .flexBox {
   width: 200px;
+  height: 100%;
 }
 .flexBox1 {
-  background-color: #61dafb;
   min-height: 100px;
 }
 .flexBox2 {
-  background-color: #dd3e3e;
   min-height: 100px;
   flex-grow: 1;
   flex-wrap: wrap;
   width: 100%;
-  height: 85%;
+  height: 90%;
+  overflow: auto;
 }
 .flexBox3 {
-  background-color: aquamarine;
   min-height: 100px;
   flex-grow: 1;
-  height: 15%;
+  height: 5%;
   width: 100%;
+}
+.flexBox4 {
+  min-height: 100px;
+  flex-grow: 1;
+  height: 5%;
+  width: 100%;
+}
+.callImg {
+  width: 30px;
+  height: 30px;
+}
+
+.kyc {
+  font-size: 24px;
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.inputCName {
+  height: 20px;
+  width: 600px;
+  margin: 12px;
+  opacity: 0.7;
+  font-weight: 400;
+  text-align: left;
+  border: transparent;
+  border-radius: 45px;
+  border-color: "white";
+  border-width: 1;
+  font-size: 20;
+  padding-left: 5;
+  background-color: "white";
+  color: "black";
+}
+.selection {
+  background-color: "white";
+  color: "black";
+  opacity: 0.7;
+  font-weight: 400;
+  text-align: center;
+  border: transparent;
+  height: auto;
+  border-radius: 15px;
+  height: 20px;
+}
+.numbersInput {
+  height: 30px;
+  width: auto;
+  margin: 10px;
+  opacity: 0.7;
+  font-weight: 400;
+  text-align: left;
+  border: transparent;
+  border-radius: 45px;
+  border-color: "grey";
+  border-width: 1;
+  font-size: 20;
+  padding-left: 5;
+  background-color: "white";
+  color: "black";
+  align-items: center;
+  text-align: center;
+}
+.inputs {
+  height: 20px;
+  width: auto;
+  margin: 10px;
+  opacity: 0.8;
+  font-weight: 400;
+  border: transparent;
+  padding-left: 5;
+  color: black;
+}
+.next {
+  margin: 20px;
+  height: 50px;
+  width: 300px;
+  border: transparent;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  color: white;
+  background-color: #dd3e3e;
+}
+.check {
+  font-size: 14px;
+}
+.radio {
+  font-size: 18px;
+  margin: 3px;
+  font-weight: 500;
 }

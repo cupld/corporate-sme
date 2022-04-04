@@ -1,27 +1,36 @@
 import "./App.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
-import SignUp from "./pages/SignUp";
-import SignIn from "./pages/SignIn";
-import MyDropzone from "./pages/DropZone";
-// import Application from "./Components/Application";
-// import Req from "./Components/Req";
-// import curve from "./Images/curve.png";
-// import Cur from "./Components/Cur";
+// import MyDropzone from "./pages/DropZone";
+import Application from "./Components/Application";
 import Footer from "./Components/Footer";
-import Testing from "./Components/Testing";
-
+import Req from "./Components/Req";
+import Header from "./Components/Header";
 function App() {
   return (
-    <div className="imgBk">
-      {/* <NavBar /> */}
-      <Routes>
-        {/* <Route path="/" element={<Req />} /> */}
-        <Route path="/" element={<Testing />} />
-        {/* <Route path="/" element={<SignUp />} /> */}
-      </Routes>
-      {/* <Footer /> */}
-    </div>
+    <main>
+      <div className="container">
+        <div className="flexBox flexBox1">
+          <NavBar />
+        </div>
+        <div className="containerB">
+          <div className="flexBox flexBox4">
+            <Header />
+          </div>
+          <div className="flexBox flexBox2">
+            <Routes>
+              <Route path="/" element={<Application />} />
+              {/* <Route path="/" element={<Application />} /> */}
+              {/* <Route path="/" element={<Testing />} /> */}
+              {/* <Route path="/" element={<SignUp />} /> */}
+            </Routes>
+          </div>
+          <footer className="flexBox flexBox3">
+            <Footer />
+          </footer>
+        </div>
+      </div>
+    </main>
   );
 }
 

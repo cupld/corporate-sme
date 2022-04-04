@@ -1,12 +1,13 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import Cur from "./Cur";
+
+import GulfBankImage from "./GulfBankImage";
 
 export default function Req() {
   return (
     <div>
       <div className="reqPage">
-        <Cur />
+        <GulfBankImage />
         <h3>Welcome To Gulf Bank!</h3>
         <h4>First step </h4>
         <h4 className="makeSure">
@@ -54,10 +55,6 @@ export default function Req() {
           </tbody>
         </Table>
       </div>
-      {/* <img
-        className="gbkImg"
-        src="https://www.chriswrightmedia.com/wp-content/uploads/2014/01/gulfbankpic.jpg"
-      /> */}
     </div>
   );
 }
