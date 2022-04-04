@@ -16,7 +16,12 @@ class AuthStore {
     makeAutoObservable(this, {});
   }
   userSignUp = (user) => {
-    createUserWithEmailAndPassword(auth, user.email, user.password)
+    createUserWithEmailAndPassword(
+      auth,
+      user.email,
+      user.password,
+      user.username
+    )
       .then(async (userCredential) => {
         await setDoc(doc(db, "users", userCredential.user.uid), {
           username: userCredential.user.displayName,

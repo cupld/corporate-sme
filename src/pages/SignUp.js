@@ -6,6 +6,7 @@ function SignUp() {
   const [user, setUser] = useState({
     email: "",
     password: "",
+    username: "",
   });
   const handleSubmit = (e) => {
     e.preventDefault();
