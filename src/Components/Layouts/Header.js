@@ -1,4 +1,5 @@
 import React from "react";
+import authStore from "../../stores/AuthStore";
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
           className="usernameLogo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Red-circle.svg/240px-Red-circle.svg.png"
         />
-        <p className="fullName">Fahad AlJuwaihel</p>
+        <p className="fullName">{authStore.username}</p>
       </div>
     </div>
   );

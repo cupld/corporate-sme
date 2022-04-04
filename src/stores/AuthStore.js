@@ -8,6 +8,8 @@ import {
 } from "firebase/auth";
 import { auth, db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
+import swal from "sweetalert";
+import { Navigate } from "react-router-dom";
 
 class AuthStore {
   user = null;
@@ -16,13 +18,20 @@ class AuthStore {
     makeAutoObservable(this, {});
   }
   userSignUp = (user) => {
-    createUserWithEmailAndPassword(auth, user.email, user.password)
+    createUserWithEmailAndPassword(
+      auth,
+      user.email,
+      user.password,
+      user.fullname
+    )
       .then(async (userCredential) => {
         await setDoc(doc(db, "users", userCredential.user.uid), {
-          username: userCredential.user.displayName,
           email: userCredential.user.email,
+          username: userCredential.user.displayName,
+          fullname: userCredential.user.fullname,
           usertype: "",
         });
+        swal("Sign UP", "You are Signed Up Successfully!", "success");
       })
 
       .catch((error) => {
@@ -33,7 +42,7 @@ class AuthStore {
           errorMessage
         );
       });
-    // return <Navigate to="/" />;
+    return <Navigate to="/" />;
   };
 
   userSignIn = (user) => {

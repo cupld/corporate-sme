@@ -1,10 +1,13 @@
 import "../App.css";
 import { useState } from "react";
 import authStore from "../stores/AuthStore";
+import Application from "../Components/App/Application";
+import { Route } from "react-router-dom";
 
 function SignUp() {
   const [user, setUser] = useState({
     email: "",
+    fullname: "",
     password: "",
   });
   const handleSubmit = (e) => {
@@ -17,6 +20,15 @@ function SignUp() {
       <header className="App-header">
         <div className="form">
           <form onSubmit={handleSubmit}>
+            <div className="input-container">
+              <label>Full Name </label>
+              <input
+                type="text"
+                name="fullname"
+                required
+                onChange={(e) => setUser({ ...user, fullname: e.target.value })}
+              />
+            </div>
             <div className="input-container">
               <label>Email </label>
               <input
