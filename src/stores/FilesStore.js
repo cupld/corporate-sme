@@ -5,6 +5,7 @@ import { doc, setDoc, getDocs, collection } from "firebase/firestore";
 
 class FilesStore {
   files = [];
+  loading = true;
 
   constructor() {
     makeAutoObservable(this, {});
@@ -13,11 +14,12 @@ class FilesStore {
     const querySnapshot = await getDocs(collection(db, "files"));
     querySnapshot.forEach((doc) => {
       this.files = doc.data().files;
-      console.log(
-        "🚀 ~ file: FilesStore.js ~ line 16 ~ FilesStore ~ l ~ this.files",
-        this.files
-      );
     });
+    this.loading = false;
+    console.log(
+      "🚀 ~ file: FilesStore.js ~ line 16 ~ FilesStore ~ l ~ this.files",
+      this.files
+    );
   };
 }
 
