@@ -1,6 +1,6 @@
-import "../App.css";
+import "../../App.css";
 import { useState } from "react";
-import authStore from "../stores/AuthStore";
+import authStore from "../../stores/AuthStore";
 
 const SignIn = () => {
   const [user, setUser] = useState({
