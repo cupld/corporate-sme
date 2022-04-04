@@ -13,33 +13,38 @@ import {
 } from "firebase/firestore";
 import { storage, db } from "../firebase";
 
-import { ref, getDownloadURL, uploadBytes } from "@firebase/storage";
+import { ref, getDownloadURL, uploadBytesResumable } from "@firebase/storage";
 import authStore from "../stores/AuthStore";
 
 function MyDropzone() {
-  const [selectedFiles, setSelectedFiles] = useState([]);
-
+  const [progress, setProgress] = useState(0);
   const [uploadedImages, setUploadedImages] = useState([]);
-  console.log(
-    "🚀 ~ file: DropZone.js ~ line 22 ~ MyDropzone ~ uploadedImages",
-    uploadedImages
-  );
+
   let upload = [];
 
   const handleChange = (acceptedFiles) => {
     acceptedFiles.map(async (selectedFile) => {
       const storageRef = ref(storage, selectedFile.name);
-      await getDownloadURL(storageRef)
-        .then(async (storageRef) => {
-          upload.push(storageRef);
-          setUploadedImages(upload);
-        })
-        .catch((error) => {
-          console.log(
-            "🚀 ~ file: DropZone.js ~ line 39 ~ uploadFile ~ error",
-            error
-          );
-        });
+      const uploadTask = uploadBytesResumable(storageRef, selectedFile);
+
+      await getDownloadURL(storageRef).then((storageRef) => {
+        upload.push(storageRef);
+        setUploadedImages(upload);
+      });
+
+      uploadTask.on("state_changed", (snapshot) => {
+        const progress = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setProgress(progress);
+      });
+
+      // .catch((error) => {
+      //   console.log(
+      //     "🚀 ~ file: DropZone.js ~ line 39 ~ uploadFile ~ error",
+      //     error
+      //   );
+      // });
     });
   };
 
@@ -48,7 +53,7 @@ function MyDropzone() {
     await setDoc(doc(db, "files", uuidv4()), {
       files: [...uploadedImages],
       timestamp: serverTimestamp(),
-      userId: authStore.user.uid,
+      // userId: authStore.user.uid,
     });
   };
 
@@ -64,6 +69,7 @@ function MyDropzone() {
           </section>
         )}
       </Dropzone>
+      {progress}%
       <button type="submit" onClick={uploadFile}>
         Submit
       </button>
