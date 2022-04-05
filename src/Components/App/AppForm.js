@@ -17,6 +17,7 @@ function AppForm() {
   return (
     <div className="kyc">
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
+<<<<<<< HEAD
         <h3>Customer Information Update Form(KYC) for Non-Individuals</h3>
         <h4>Company Details 1</h4>
         <Row className="mb-3">
@@ -431,6 +432,9 @@ function AppForm() {
             </div>
           </>
         </Form.Group>
+=======
+        <MyDropzone />
+>>>>>>> drop
         <Form.Group className="mb-3">
           <h4>Terms and Conditions</h4>
 

@@ -1,6 +1,8 @@
 import "../../App.css";
 import { useState } from "react";
 import authStore from "../../stores/AuthStore";
+import { NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [user, setUser] = useState({
@@ -56,6 +58,9 @@ function SignUp() {
           <button className="sButton" onClick={handleSubmit} type="submit">
             Register
           </button>
+          <Link to={`/SignIn`}>
+            <p>Already a Member</p>
+          </Link>
         </form>
       </div>
     </div>

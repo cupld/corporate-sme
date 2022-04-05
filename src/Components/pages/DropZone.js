@@ -67,6 +67,7 @@ function MyDropzone() {
             <div {...getRootProps()}>
               <input {...getInputProps()} type="file" multiple />
               <p>Drag 'n' drop some files here, or click to select files</p>
+              <div className="drop"></div>
             </div>
           </section>
         )}

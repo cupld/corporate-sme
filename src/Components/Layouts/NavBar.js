@@ -7,7 +7,7 @@ function NavBar() {
     <div>
       <div className="navbar">
         <div className="icon">
-          <NavLink to={`/`}>
+          <NavLink to={`/AppSteps/Step1`}>
             <img
               className="imaging"
               src="https://cdn-icons-png.flaticon.com/512/1600/1600196.png"

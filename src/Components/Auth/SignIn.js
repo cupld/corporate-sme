@@ -1,6 +1,7 @@
 import "../../App.css";
 import { useState } from "react";
 import authStore from "../../stores/AuthStore";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [user, setUser] = useState({
@@ -43,6 +44,9 @@ const SignIn = () => {
           <button className="sButton" onClick={handleSubmit}>
             SignIn
           </button>
+          <Link to={`/`}>
+            <p>Register here</p>
+          </Link>
         </form>
       </div>
     </div>
