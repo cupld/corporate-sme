@@ -23,7 +23,7 @@ function App() {
           </div>
           <div className="flexBox flexBox2">
             <Routes>
-              <Route path="/" element={<Application />} />
+              {/* <Route path="/" element={<Application />} /> */}
               <Route path="/Requirements" element={<Req />} />
               <Route path="/Testing" element={<Testing />} />
               <Route path="/" element={<SignUpComponent />} />
