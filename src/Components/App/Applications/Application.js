@@ -2,11 +2,11 @@ import React from "react";
 import Stages from "../Stages/Stages";
 import Step from "../Steps/Step";
 
-function Application() {
+function Application({ setApplication, application }) {
   return (
     <div>
       <Stages />
-      <Step />
+      <Step setApplication={setApplication} application={application} />
     </div>
   );
 }

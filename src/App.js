@@ -14,7 +14,60 @@ import SignInComponent from "./Components/Auth/SignInComponent";
 import Application2 from "./Components/App/Applications/Application2";
 import Application3 from "./Components/App/Applications/Application3";
 import Application4 from "./Components/App/Applications/Application4";
+import { useState } from "react";
+
 function App() {
+  const [application, setApplication] = useState({
+    companyName: "",
+    typeOfEntiyt: "",
+    companyType: "",
+    branch: "",
+    branchesNumber: "",
+    comercialRegisteration: "",
+    mosalNo: "",
+    licenseNo: "",
+    expiry: "",
+    licenseDate: "",
+    establishmentDate: "",
+    address: {
+      Country: "",
+      Block: "",
+      Avenue: "",
+      Street: "",
+      Building: "",
+      Shop: "",
+      Mobile: "",
+    },
+    companyInfo: {
+      pobox: "",
+      Email: "",
+      officialWebsite: "",
+      socialMedia: "",
+    },
+    natureOfBusiness: {
+      nature: "",
+      others: "",
+      productno: "",
+    },
+    shareHolding: {
+      shareHolding: "",
+      shareHolderName: "",
+      ownerShip: "",
+    },
+    political: "",
+    poa: "",
+    entityScope: "",
+    commercialRegistration: "",
+    pep: "",
+    partnterdocuments: "",
+    income: "",
+    qnt: "",
+    qvt: "",
+    otherbank: { name: [] },
+    natureOfTransactions: "",
+    dropzone: "",
+  });
+  console.log("🚀 ~ file: App.js ~ line 21 ~ App ~ application", application);
   return (
     <main>
       <div className="container">
@@ -27,7 +80,15 @@ function App() {
           </div>
           <div className="flexBox flexBox2">
             <Routes>
-              <Route path="/AppSteps/Step1" element={<Application />} />
+              <Route
+                path="/AppSteps/Step1"
+                element={
+                  <Application
+                    setApplication={setApplication}
+                    application={application}
+                  />
+                }
+              />
               <Route path="/Requirements" element={<Req />} />
               <Route path="/Testing" element={<Testing />} />
               <Route path="/" element={<SignUpComponent />} />
