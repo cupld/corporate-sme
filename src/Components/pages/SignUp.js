@@ -7,6 +7,7 @@ function SignUp() {
     email: "",
     password: "",
     username: "",
+    fullname: "",
   });
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ function SignUp() {
               type="text"
               name="name"
               required
-              onChange={(e) => setUser({ ...user, name: e.target.value })}
+              onChange={(e) => setUser({ ...user, fullname: e.target.value })}
             />
           </div>
           <div className="">

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import app from "../../firebase";
 
 function Header() {
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Col, Form, Row, FormGroup, Button } from "react-bootstrap";
+import MyDropzone from "../pages/DropZone";
 
 function AppForm() {
   const [validated, setValidated] = useState(false);
@@ -424,6 +425,9 @@ function AppForm() {
                 aria-label="option 2"
                 label="POS Payments"
               />
+            </div>
+            <div className="dropzone">
+              <MyDropzone />
             </div>
           </>
         </Form.Group>

@@ -522,3 +522,9 @@ article {
   opacity: 0.9;
   color: black;
 }
+
+.dropzone {
+  width : 90%;
+  height : 20%;
+  border : 1px solid black;
+}

@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Dropzone from "react-dropzone";
 import { v4 as uuidv4 } from "uuid";
+import swal from "sweetalert";
 
 import {
   addDoc,
@@ -11,10 +12,10 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore";
-import { storage, db } from "../firebase";
+import { storage, db } from "../../firebase";
 
 import { ref, getDownloadURL, uploadBytesResumable } from "@firebase/storage";
-import authStore from "../stores/AuthStore";
+import authStore from "../../stores/AuthStore";
 
 function MyDropzone() {
   const [progress, setProgress] = useState(0);
@@ -55,6 +56,7 @@ function MyDropzone() {
       timestamp: serverTimestamp(),
       // userId: authStore.user.uid,
     });
+    swal("Files has been uploaded!", { dangerMode: true });
   };
 
   return (
@@ -69,10 +71,12 @@ function MyDropzone() {
           </section>
         )}
       </Dropzone>
-      {progress}%
-      <button type="submit" onClick={uploadFile}>
-        Submit
-      </button>
+      <div>{progress}%</div>
+      <div>
+        <button type="submit" onClick={uploadFile}>
+          Submit
+        </button>
+      </div>
     </>
   );
 }

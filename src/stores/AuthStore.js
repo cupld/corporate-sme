@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import { auth, db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
+import swal from "sweetalert";
 
 class AuthStore {
   user = null;
@@ -26,7 +27,11 @@ class AuthStore {
         await setDoc(doc(db, "users", userCredential.user.uid), {
           username: userCredential.user.displayName,
           email: userCredential.user.email,
+          fullname: user.fullname,
           usertype: "",
+        });
+        swal("Sign UP", "Signed Up Successfully!", "success", {
+          dangerMode: true,
         });
       })
 
