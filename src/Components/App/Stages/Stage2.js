@@ -1,17 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Stages() {
+function Stage2() {
   return (
-    <div>
+    <div className="stepping">
       <div className="step1">
-        <img
-          className="stepimg"
-          src="https://cdn-icons-png.flaticon.com/512/3564/3564180.png"
-        />
+        <Link to={`/AppSteps/Step1`}>
+          <img
+            className="stepimg"
+            src="https://cdn-icons-png.flaticon.com/512/3564/3564180.png"
+          />
+        </Link>
         <hr
           style={{
             height: "5px",
-            backgroundColor: "#c4c4c4",
+            backgroundColor: "#dd3e3e",
             width: "150px",
             border: "none",
             position: "relative",
@@ -22,11 +25,13 @@ function Stages() {
         />
       </div>
 
-      <div className="step2">
-        <img
-          className="stepimg"
-          src="https://cdn-icons-png.flaticon.com/512/3179/3179247.png"
-        />
+      <div className="step2Red">
+        <Link to={"/AppSteps/Step1/Step2/"}>
+          <img
+            className="stepimg"
+            src="https://cdn-icons-png.flaticon.com/512/3564/3564186.png"
+          />
+        </Link>
         <hr
           style={{
             height: "5px",
@@ -40,11 +45,14 @@ function Stages() {
           }}
         />
       </div>
+
       <div className="step3">
-        <img
-          className="stepimg"
-          src="https://cdn-icons-png.flaticon.com/512/3179/3179243.png"
-        />
+        <Link to={`/AppSteps/Step1/Step2/Step3`}>
+          <img
+            className="stepimg"
+            src="https://cdn-icons-png.flaticon.com/512/3179/3179243.png"
+          />
+        </Link>
         <hr
           style={{
             height: "5px",
@@ -58,12 +66,16 @@ function Stages() {
           }}
         />
       </div>
+
       <div className="step4">
-        <img
-          className="stepimg"
-          src="https://cdn-icons-png.flaticon.com/512/3179/3179234.png"
-        />
+        <Link to={`/AppSteps/Step1/Step2/Step3/Step4`}>
+          <img
+            className="stepimg"
+            src="https://cdn-icons-png.flaticon.com/512/3179/3179234.png"
+          />
+        </Link>
       </div>
+
       {/* <div className="step5">
     <img
       className="stepimg"
@@ -74,4 +86,4 @@ function Stages() {
   );
 }
 
-export default Stages;
+export default Stage2;

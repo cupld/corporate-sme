@@ -1,6 +1,5 @@
 import React from "react";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
+import SignUp from "./Auth/SignUp";
 
 function Testing() {
   return (

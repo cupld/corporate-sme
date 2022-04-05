@@ -1,22 +1,36 @@
 import "../../App.css";
 import { useState } from "react";
 import authStore from "../../stores/AuthStore";
+import { NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const SignIn = () => {
+function SignUp() {
   const [user, setUser] = useState({
     email: "",
     password: "",
+    username: "",
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    authStore.userSignIn(user);
-    console.log("🚀 ~ file: SignIn.js ~ line 13 ~ handleSubmit ~ user", user);
+    authStore.userSignUp(user);
+    console.log("🚀 ~ file: signup.js ~ line 13 ~ handleSubmit ~ user", user);
   };
   return (
-    <div className="containerIn">
-      <header className="sHeading">Sign In</header>
+    <div className="containerUp">
+      <header className="sHeading">Sign Up</header>
       <div className="sDiv">
         <form onSubmit={handleSubmit}>
+          <div className="">
+            <p>Full Name </p>
+            <input
+              placeholder="Enter your Name"
+              className="sInput"
+              type="text"
+              name="name"
+              required
+              onChange={(e) => setUser({ ...user, name: e.target.value })}
+            />
+          </div>
           <div className="">
             <p>Email </p>
             <input
@@ -40,13 +54,16 @@ const SignIn = () => {
             />
           </div>
 
-          <button className="sButton" onClick={handleSubmit}>
-            SignIn
+          <button className="sButton" onClick={handleSubmit} type="submit">
+            Register
           </button>
+          <Link to={`/SignIn`}>
+            <p>Already a Member</p>
+          </Link>
         </form>
       </div>
     </div>
   );
-};
+}
 
-export default SignIn;
+export default SignUp;

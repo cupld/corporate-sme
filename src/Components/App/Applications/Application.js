@@ -1,13 +1,12 @@
 import React from "react";
-import AppForm from "./AppForm";
-import Stages from "./Stages";
+import Stages from "../Stages/Stages";
+import Step from "../Steps/Step";
 
 function Application() {
   return (
     <div>
       <Stages />
-      <AppForm />
-      <div></div>
+      <Step />
     </div>
   );
 }

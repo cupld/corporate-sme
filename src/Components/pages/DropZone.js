@@ -11,10 +11,10 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore";
-import { storage, db } from "../firebase";
+import { storage, db } from "../../firebase";
 
 import { ref, getDownloadURL, uploadBytesResumable } from "@firebase/storage";
-import authStore from "../stores/AuthStore";
+import authStore from "../../stores/AuthStore";
 
 function MyDropzone() {
   const [progress, setProgress] = useState(0);
@@ -65,6 +65,7 @@ function MyDropzone() {
             <div {...getRootProps()}>
               <input {...getInputProps()} type="file" multiple />
               <p>Drag 'n' drop some files here, or click to select files</p>
+              <div className="drop"></div>
             </div>
           </section>
         )}

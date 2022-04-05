@@ -1,15 +1,19 @@
+//React
 import "./App.css";
-import { NavLink, Route, Routes } from "react-router-dom";
-import NavBar from "./Components/Layouts/NavBar";
-// import MyDropzone from "./pages/DropZone";
-import Application from "./Components/App/Application";
-import Footer from "./Components/Layouts/Footer";
+import { Route, Routes } from "react-router-dom";
+//Pages
 import Req from "./Components/Req";
-import Header from "./Components/Layouts/Header";
 import Testing from "./Components/Testing";
 import Status from "./Components/Email/Status";
+import Footer from "./Components/Layouts/Footer";
+import NavBar from "./Components/Layouts/NavBar";
+import Header from "./Components/Layouts/Header";
+import Application from "./Components/App/Applications/Application";
 import SignUpComponent from "./Components/Auth/SignUpComponent";
 import SignInComponent from "./Components/Auth/SignInComponent";
+import Application2 from "./Components/App/Applications/Application2";
+import Application3 from "./Components/App/Applications/Application3";
+import Application4 from "./Components/App/Applications/Application4";
 function App() {
   return (
     <main>
@@ -23,12 +27,21 @@ function App() {
           </div>
           <div className="flexBox flexBox2">
             <Routes>
-              <Route path="/" element={<Application />} />
+              <Route path="/AppSteps/Step1" element={<Application />} />
               <Route path="/Requirements" element={<Req />} />
               <Route path="/Testing" element={<Testing />} />
-              <Route path="/Signup" element={<SignUpComponent />} />
+              <Route path="/" element={<SignUpComponent />} />
               <Route path="/Status" element={<Status />} />
               <Route path="/SignIn" element={<SignInComponent />} />
+              <Route path="/AppSteps/Step1/Step2" element={<Application2 />} />
+              <Route
+                path="/AppSteps/Step1/Step2/Step3"
+                element={<Application3 />}
+              />
+              <Route
+                path="/AppSteps/Step1/Step2/Step3/Step4"
+                element={<Application4 />}
+              />
             </Routes>
           </div>
           <footer className="flexBox flexBox3">

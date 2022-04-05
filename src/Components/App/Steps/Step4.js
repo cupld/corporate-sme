@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { Col, Form, Row, FormGroup, Button } from "react-bootstrap";
-import MyDropzone from "../pages/DropZone";
+import MyDropzone from "../../pages/DropZone";
 
-function AppForm() {
+function Step4() {
   const [validated, setValidated] = useState(false);
-
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-
     setValidated(true);
   };
   return (
@@ -41,11 +39,11 @@ function AppForm() {
         </Form.Group>
 
         <Button className="next" type="submit">
-          Next Step
+          Submit
         </Button>
       </Form>
     </div>
   );
 }
 
-export default AppForm;
+export default Step4;

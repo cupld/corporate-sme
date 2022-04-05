@@ -1,34 +1,23 @@
 import "../../App.css";
 import { useState } from "react";
 import authStore from "../../stores/AuthStore";
+import { Link } from "react-router-dom";
 
-function SignUp() {
+const SignIn = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
-    username: "",
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    authStore.userSignUp(user);
-    console.log("🚀 ~ file: signup.js ~ line 13 ~ handleSubmit ~ user", user);
+    authStore.userSignIn(user);
+    console.log("🚀 ~ file: SignIn.js ~ line 13 ~ handleSubmit ~ user", user);
   };
   return (
-    <div className="containerUp">
-      <header className="sHeading">Sign Up</header>
+    <div className="containerIn">
+      <header className="sHeading">Sign In</header>
       <div className="sDiv">
         <form onSubmit={handleSubmit}>
-          <div className="">
-            <p>Full Name </p>
-            <input
-              placeholder="Enter your Name"
-              className="sInput"
-              type="text"
-              name="name"
-              required
-              onChange={(e) => setUser({ ...user, name: e.target.value })}
-            />
-          </div>
           <div className="">
             <p>Email </p>
             <input
@@ -52,13 +41,16 @@ function SignUp() {
             />
           </div>
 
-          <button className="sButton" onClick={handleSubmit} type="submit">
-            Register
+          <button className="sButton" onClick={handleSubmit}>
+            SignIn
           </button>
+          <Link to={`/`}>
+            <p>Register here</p>
+          </Link>
         </form>
       </div>
     </div>
   );
-}
+};
 
-export default SignUp;
+export default SignIn;
