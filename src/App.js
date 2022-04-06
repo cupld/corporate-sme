@@ -14,6 +14,7 @@ import SignInComponent from "./Components/Auth/SignInComponent";
 import Application2 from "./Components/App/Applications/Application2";
 import Application3 from "./Components/App/Applications/Application3";
 import Application4 from "./Components/App/Applications/Application4";
+import SubmitingApp from "./Components/App/Applications/SubmitingApp";
 function App() {
   return (
     <main>
@@ -42,6 +43,7 @@ function App() {
                 path="/AppSteps/Step1/Step2/Step3/Step4"
                 element={<Application4 />}
               />
+              <Route path="/Submition" element={<SubmitingApp />} />
             </Routes>
           </div>
           <footer className="flexBox flexBox3">

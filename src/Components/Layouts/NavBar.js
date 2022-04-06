@@ -7,24 +7,24 @@ function NavBar() {
     <div>
       <div className="navbar">
         <div className="icon">
-          <NavLink to={`/AppSteps/Step1`}>
+          <NavLink to={`/Requirements`}>
             <img
               className="imaging"
               src="https://cdn-icons-png.flaticon.com/512/1600/1600196.png"
             />
           </NavLink>
-          Application Form
+          SME Form
         </div>
-
         <div className="icon">
-          <NavLink to={`/Requirements`}>
+          <NavLink to={`/AppSteps/Step1`}>
             <img
               className="imaging"
               src="https://cdn-icons-png.flaticon.com/512/2541/2541984.png"
             />
           </NavLink>
-          Requirment
+          KYC
         </div>
+
         <div className="icon">
           <NavLink to={`/Status`}>
             <img
@@ -32,7 +32,7 @@ function NavBar() {
               src="https://cdn-icons-png.flaticon.com/512/3617/3617143.png"
             />
           </NavLink>
-          Application Status
+          Applications
         </div>
         {/* <div className="icon">
           <img

@@ -566,3 +566,7 @@ article {
   background-color: #c4c4c4;
   margin: 10px;
 }
+.reqSign {
+  font-size: larger;
+  color: #dd3e3e;
+}
