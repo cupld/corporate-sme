@@ -6,7 +6,7 @@ function GulfBankImage() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -16,19 +16,19 @@ function GulfBankImage() {
         <div>
           <img
             className="imageC"
-            src="https://www.intelligentcio.com/me/wp-content/uploads/sites/12/2019/03/Gulf-Bank-1000.png"
-          />
-        </div>
-        <div>
-          <img
-            className="imageC"
-            src="https://www.almrsal.com/wp-content/uploads/2014/10/Gulf-Bank-One-of-Kuwaits-oldest-banks-established-in-1960.jpg"
-          />
-        </div>
-        <div>
-          <img
-            className="imageC"
             src="https://media-exp1.licdn.com/dms/image/C4D1BAQETHp7J5e_yyQ/company-background_10000/0/1601896093708?e=2147483647&v=beta&t=imWr5FMIyDd_JV5cbHUntkbgq3Dw-zbk4xDywoiSugI"
+          />
+        </div>
+        <div>
+          <img
+            className="imageC"
+            src="https://www.gckuwait.com/wp-content/uploads/2016/12/gulf-consult-Gulf-Bank-Branches-11.jpg"
+          />
+        </div>
+        <div>
+          <img
+            className="imageC"
+            src="https://www.intelligentcio.com/me/wp-content/uploads/sites/12/2019/03/Gulf-Bank-1000.png"
           />
         </div>
       </Slider>

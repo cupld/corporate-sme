@@ -14,60 +14,8 @@ import SignInComponent from "./Components/Auth/SignInComponent";
 import Application2 from "./Components/App/Applications/Application2";
 import Application3 from "./Components/App/Applications/Application3";
 import Application4 from "./Components/App/Applications/Application4";
-import { useState } from "react";
-
+import SubmitingApp from "./Components/App/Applications/SubmitingApp";
 function App() {
-  const [application, setApplication] = useState({
-    companyName: "",
-    typeOfEntiyt: "",
-    companyType: "",
-    branch: "",
-    branchesNumber: "",
-    comercialRegisteration: "",
-    mosalNo: "",
-    licenseNo: "",
-    expiry: "",
-    licenseDate: "",
-    establishmentDate: "",
-    address: {
-      Country: "",
-      Block: "",
-      Avenue: "",
-      Street: "",
-      Building: "",
-      Shop: "",
-      Mobile: "",
-    },
-    companyInfo: {
-      pobox: "",
-      Email: "",
-      officialWebsite: "",
-      socialMedia: "",
-    },
-    natureOfBusiness: {
-      nature: "",
-      others: "",
-      productno: "",
-    },
-    shareHolding: {
-      shareHolding: "",
-      shareHolderName: "",
-      ownerShip: "",
-    },
-    political: "",
-    poa: "",
-    entityScope: "",
-    commercialRegistration: "",
-    pep: "",
-    partnterdocuments: "",
-    income: "",
-    qnt: "",
-    qvt: "",
-    otherbank: { name: [] },
-    natureOfTransactions: "",
-    dropzone: "",
-  });
-  console.log("🚀 ~ file: App.js ~ line 21 ~ App ~ application", application);
   return (
     <main>
       <div className="container">
@@ -103,6 +51,7 @@ function App() {
                 path="/AppSteps/Step1/Step2/Step3/Step4"
                 element={<Application4 />}
               />
+              <Route path="/Submition" element={<SubmitingApp />} />
             </Routes>
           </div>
           <footer className="flexBox flexBox3">
@@ -115,3 +64,55 @@ function App() {
 }
 
 export default App;
+
+// const [application, setApplication] = useState({
+//   companyName: "",
+//   typeOfEntiyt: "",
+//   companyType: "",
+//   branch: "",
+//   branchesNumber: "",
+//   comercialRegisteration: "",
+//   mosalNo: "",
+//   licenseNo: "",
+//   expiry: "",
+//   licenseDate: "",
+//   establishmentDate: "",
+//   address: {
+//     Country: "",
+//     Block: "",
+//     Avenue: "",
+//     Street: "",
+//     Building: "",
+//     Shop: "",
+//     Mobile: "",
+//   },
+//   companyInfo: {
+//     pobox: "",
+//     Email: "",
+//     officialWebsite: "",
+//     socialMedia: "",
+//   },
+//   natureOfBusiness: {
+//     nature: "",
+//     others: "",
+//     productno: "",
+//   },
+//   shareHolding: {
+//     shareHolding: "",
+//     shareHolderName: "",
+//     ownerShip: "",
+//   },
+//   political: "",
+//   poa: "",
+//   entityScope: "",
+//   commercialRegistration: "",
+//   pep: "",
+//   partnterdocuments: "",
+//   income: "",
+//   qnt: "",
+//   qvt: "",
+//   otherbank: { name: [] },
+//   natureOfTransactions: "",
+//   dropzone: "",
+// });
+// console.log("🚀 ~ file: App.js ~ line 21 ~ App ~ application", application);

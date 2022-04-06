@@ -1,9 +1,13 @@
 import React from "react";
+import authStore from "../../stores/AuthStore";
+import filesStore from "../../stores/FilesStore";
 
 function Status() {
   return (
     <div className="flexStatus">
-      <div className="sent">Application Sents</div>
+      <div>{authStore.user.email}</div>
+      <div>{filesStore.fetchfiles}</div>
+      {/* <div className="sent">Application Sents</div>
       <div className="sendArrow">
         <img
           className="arrow"
@@ -34,7 +38,7 @@ function Status() {
           src="https://cdn-icons-png.flaticon.com/512/329/329343.png"
         />
       </div>
-      <div className="sending">Sent to "Area" Branch</div>
+      <div className="sending">Sent to "Area" Branch</div> */}
     </div>
   );
 }

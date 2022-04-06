@@ -4,7 +4,7 @@ import { db } from "../firebase";
 import { getDocs, collection, getDoc } from "firebase/firestore";
 
 import moment from "moment";
-import filesStore from "../stores/FilesStore";
+import filesStore from "../../stores/FilesStore";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react";
 
